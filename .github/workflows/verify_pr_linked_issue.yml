@@ -1,0 +1,20 @@
+name: Verify PR Linked Issue
+
+on:
+  pull_request:
+    types: [edited, labeled, unlabeled, opened, reopened, synchronize]
+
+jobs:
+  check_pull_request:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: read
+      pull-requests: write
+
+    steps:
+      - name: Verify PR is linked to a issue
+        uses: nearform-actions/github-action-check-linked-issues@v1
+        id: check-linked-issues
+        with:
+          comment: false
