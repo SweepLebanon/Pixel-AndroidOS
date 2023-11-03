@@ -22,7 +22,13 @@ The package is currently in development. The release date is to be determined.
 
 ## Installation
 
-To be determined.
+Gradle is the only supported build configuration, therefore add the dependency to your project `build.gradle` file:
+
+```kotlin
+dependencies {
+    implementation("com.sweep.pixel:1.0.0")
+}
+```
 
 
 ## Documentation
