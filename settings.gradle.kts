@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Pixel"
 include(":app")
-include(":Pixel")
+include(":pixel")
