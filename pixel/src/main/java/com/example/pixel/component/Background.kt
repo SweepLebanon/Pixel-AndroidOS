@@ -134,47 +134,7 @@ annotation class ThemePreviews
 @ThemePreviews
 @Composable
 fun BackgroundDefault() {
-    PixelTheme(disableDynamicTheming = true) {
+    PixelTheme {
         PixelBackground(Modifier.size(100.dp), content = {})
-    }
-}
-
-@ThemePreviews
-@Composable
-fun BackgroundDynamic() {
-    PixelTheme(disableDynamicTheming = false) {
-        PixelBackground(Modifier.size(100.dp), content = {})
-    }
-}
-
-@ThemePreviews
-@Composable
-fun BackgroundAndroid() {
-    PixelTheme(androidTheme = true) {
-        PixelBackground(Modifier.size(100.dp), content = {})
-    }
-}
-
-@ThemePreviews
-@Composable
-fun GradientBackgroundDefault() {
-    PixelTheme(disableDynamicTheming = true) {
-        PixelGradientBackground(Modifier.size(100.dp), content = {})
-    }
-}
-
-@ThemePreviews
-@Composable
-fun GradientBackgroundDynamic() {
-    PixelTheme(disableDynamicTheming = false) {
-        PixelGradientBackground(Modifier.size(100.dp), content = {})
-    }
-}
-
-@ThemePreviews
-@Composable
-fun GradientBackgroundAndroid() {
-    PixelTheme(androidTheme = true) {
-        PixelGradientBackground(Modifier.size(100.dp), content = {})
     }
 }
