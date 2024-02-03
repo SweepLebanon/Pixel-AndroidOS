@@ -1,102 +1,226 @@
 package com.example.pixel.theme
 
-import androidx.compose.material3.Typography
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.pixel.R
 
 /**
  * Pixel typography.
  */
-internal val PixelTypography = Typography(
-    displayLarge = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 57.sp,
-        lineHeight = 64.sp,
-        letterSpacing = (-0.25).sp,
-    ),
-    displayMedium = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 45.sp,
-        lineHeight = 52.sp,
-        letterSpacing = 0.sp,
-    ),
-    displaySmall = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 36.sp,
-        lineHeight = 44.sp,
-        letterSpacing = 0.sp,
-    ),
-    headlineLarge = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 32.sp,
-        lineHeight = 40.sp,
-        letterSpacing = 0.sp,
-    ),
-    headlineMedium = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 28.sp,
-        lineHeight = 36.sp,
-        letterSpacing = 0.sp,
-    ),
-    headlineSmall = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 24.sp,
-        lineHeight = 32.sp,
-        letterSpacing = 0.sp,
-    ),
-    titleLarge = TextStyle(
-        fontWeight = FontWeight.Bold,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp,
-    ),
-    titleMedium = TextStyle(
-        fontWeight = FontWeight.Bold,
-        fontSize = 18.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.1.sp,
-    ),
-    titleSmall = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 0.1.sp,
-    ),
-    bodyLarge = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp,
-    ),
-    bodyMedium = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 0.25.sp,
-    ),
-    bodySmall = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.4.sp,
-    ),
-    labelLarge = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 0.1.sp,
-    ),
-    labelMedium = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 12.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp,
-    ),
-    labelSmall = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 10.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.sp,
-    ),
+
+val dinoFontFamily = FontFamily(
+    Font(R.font.dinpro_light, FontWeight.Light),
+    Font(R.font.dinpro_regular, FontWeight.Normal),
+    Font(R.font.dinpro_medium, FontWeight.Medium),
+    Font(R.font.dinpro_bold, FontWeight.Bold),
+    Font(R.font.dinpro_black, FontWeight.ExtraBold)
 )
+
+@Immutable
+data class CustomTypography(
+    val superDino1: TextStyle,
+    val superDino2: TextStyle,
+    val dino1: TextStyle,
+    val dino2: TextStyle,
+    val dino3: TextStyle,
+    val dino4: TextStyle,
+    val big1: TextStyle,
+    val big2: TextStyle,
+    val big3: TextStyle,
+    val big4: TextStyle,
+    val medium1: TextStyle,
+    val medium2: TextStyle,
+    val medium3: TextStyle,
+    val mediumSmall1: TextStyle,
+    val mediumSmall2: TextStyle,
+    val mediumSmall3: TextStyle,
+    val small1: TextStyle,
+    val small2: TextStyle,
+    val small3: TextStyle,
+    val small4: TextStyle,
+    val superSmall1: TextStyle,
+    val superSmall2: TextStyle,
+    val superSmall3: TextStyle,
+    val capsBig: TextStyle,
+    val capsMedium: TextStyle,
+    val capsSmall: TextStyle,
+    val capsSuperSmall: TextStyle,
+    val capsSuperTiny: TextStyle
+) {
+    companion object {
+        val Default = CustomTypography(
+            superDino1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 36.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            superDino2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 28.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            dino1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 26.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            dino2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 22.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            dino3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 20.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            dino4 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 36.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            big1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 18.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            big2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 16.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            big3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 16.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Medium
+            ),
+            big4 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 16.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            medium1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 14.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            medium2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 14.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Medium
+            ),
+            medium3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 14.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            mediumSmall1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 14.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            mediumSmall2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 13.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Medium
+            ),
+            mediumSmall3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 13.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            small1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 12.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            small2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 12.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            small3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 11.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            small4 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 11.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            superSmall1 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 10.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            superSmall2 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 10.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Medium
+            ),
+            superSmall3 = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 10.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Normal
+            ),
+            capsBig = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 16.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold,
+            ),
+            capsMedium = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 14.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            capsSmall = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 12.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold,
+            ),
+            capsSuperSmall = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 10.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            capsSuperTiny = TextStyle.Default.copy(
+                fontFamily = dinoFontFamily,
+                fontSize = 8.sp,
+                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.Bold
+            ),
+        )
+    }
+}
