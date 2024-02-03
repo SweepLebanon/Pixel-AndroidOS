@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -56,7 +55,7 @@ fun PixelCatalog() {
                 item {
                     Text(
                         text = "Pixel Catalog",
-                        style = MaterialTheme.typography.headlineSmall,
+                        style = PixelTheme.typography.big1,
                     )
                 }
                 item { Text("Buttons", Modifier.padding(top = 16.dp)) }
