@@ -343,7 +343,7 @@ fun darkColorScheme(
  * specific changed value to recompose.
  */
 internal fun ColorScheme.updateColorSchemeFrom(other: ColorScheme) {
-    blue = other.beige
+    blue = other.blue
     beige = other.beige
     barleyWhite = other.barleyWhite
     cararra = other.cararra

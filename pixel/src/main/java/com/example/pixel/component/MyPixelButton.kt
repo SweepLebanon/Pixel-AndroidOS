@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.pixel.theme.AppCatalogTheme
 import com.example.pixel.theme.PixelTheme
-import com.example.pixel.theme.lightColorScheme
 
 @Composable
 fun MyPixelButton(
@@ -49,18 +49,18 @@ fun MyPixelButton(
     )
 }
 
+
 val ButtonShape = RoundedCornerShape(percent = 50)
 
 @Preview
 @Composable
 fun MyPixelButtonPreview() {
-    PixelTheme(colorScheme = lightColorScheme) {
+    AppCatalogTheme {
         MyPixelButton(onClick = { /*TODO*/ }) {
-            ProvideTextStyle(value = PixelTheme.typography.big4) {
-                Text(
-                    text = "Hello", color = PixelTheme.colorScheme.dark8
-                )
-            }
+            Text(
+                text = "Hello", color = PixelTheme.colorScheme.dark8,
+            )
+
         }
     }
 }

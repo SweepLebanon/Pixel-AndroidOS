@@ -48,5 +48,5 @@ data class Padding(
     }
 }
 
-val LocalPadding = staticCompositionLocalOf { Padding() }
+val LocalPadding = staticCompositionLocalOf { Padding.Default }
 

@@ -1,13 +1,13 @@
 package com.example.pixel.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.material.ripple.RippleTheme
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -187,53 +187,69 @@ val darkColorScheme = darkColorScheme(
 )
 
 /**
- * Pixel theme.
+ * AppCatalog theme.
  *
  * @param darkTheme Whether the theme should use a dark color scheme (follows system by default).
  */
 @Composable
+fun AppCatalogTheme(
+    darkTheme: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    val colorScheme = if(darkTheme) darkColorScheme else lightColorScheme
+    PixelTheme(
+        colorScheme = colorScheme,
+        content = content
+    )
+}
+
+
+@Composable
 fun PixelTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
     colorScheme: ColorScheme = PixelTheme.colorScheme,
+    typography: CustomTypography = PixelTheme.typography,
+    padding: Padding = PixelTheme.padding,
     content: @Composable () -> Unit,
 ) {
+
     val rememberedColorScheme = remember {
         // Explicitly creating a new object here so we don't mutate the initial [colorScheme]
         // provided, and overwrite the values set in it.
-        lightColorScheme.copy()
+        colorScheme.copy()
     }.apply {
         updateColorSchemeFrom(colorScheme)
     }
-    val rippleIndication = rememberRipple()
-    val selectionColors = rememberTextSelectionColors(rememberedColorScheme)
 
-    val pixelTypography = CustomTypography.Default
-    val pixelPadding = Padding.Default
-    // Composition locals
     CompositionLocalProvider(
-        LocalColorScheme provides rememberedColorScheme,
-        LocalTypography provides pixelTypography,
-        LocalPadding provides pixelPadding,
-        content = content
-    )
-
+        LocalColorScheme providesDefault rememberedColorScheme,
+        LocalTypography provides typography,
+        LocalPadding provides padding,
+    ) {
+        ProvideTextStyle(value = typography.big2, content = content)
+    }
 }
+
 
 // Use with eg. ExtendedTheme.colors.tertiary
 object PixelTheme {
     val colors: CustomColors
+        @ReadOnlyComposable
         @Composable get() = LocalColors.current
 
     val colorScheme: ColorScheme
+        @ReadOnlyComposable
         @Composable get() = LocalColorScheme.current
 
     val typography: CustomTypography
+        @ReadOnlyComposable
         @Composable get() = LocalTypography.current
 
     val padding: Padding
+        @ReadOnlyComposable
         @Composable get() = LocalPadding.current
 
 }
+
 @Immutable
 private object MaterialRippleTheme : RippleTheme {
     @Composable
