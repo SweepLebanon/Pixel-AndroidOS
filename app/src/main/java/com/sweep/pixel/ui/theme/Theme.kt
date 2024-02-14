@@ -1,6 +1,8 @@
 package com.sweep.pixel.ui.theme
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
 import com.example.pixel.theme.PixelTheme
 import com.example.pixel.theme.darkColorScheme
 import com.example.pixel.theme.lightColorScheme
@@ -70,6 +72,7 @@ val darkColorScheme = darkColorScheme(
     dark8 = Dark8
 )
 
+
 /**
  * AppCatalog theme.
  *
@@ -80,9 +83,21 @@ fun AppCatalogTheme(
     darkTheme: Boolean = false,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if(darkTheme) darkColorScheme else lightColorScheme
-    PixelTheme(
-        colorScheme = colorScheme,
-        content = content
-    )
+    val colorScheme = if (darkTheme) darkColorScheme else lightColorScheme
+    val extendedColors = ExtendedColors.Default
+    CompositionLocalProvider(
+        LocalExtendedColors provides extendedColors,
+    ) {
+        PixelTheme(
+            colorScheme = colorScheme,
+            content = content
+        )
+    }
+}
+
+object AppCatalogTheme {
+    val extendedColors: ExtendedColors
+        @ReadOnlyComposable
+        @Composable get() = LocalExtendedColors.current
+
 }
