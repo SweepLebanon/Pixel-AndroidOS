@@ -1,4 +1,4 @@
-package com.example.pixel.theme
+package com.sweep.pixel.ui.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextStyle
@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.sp
 import com.example.pixel.R
 
 /**
- * Pixel typography.
+ * Catalog typography.
  */
 
 val dinoFontFamily = FontFamily(

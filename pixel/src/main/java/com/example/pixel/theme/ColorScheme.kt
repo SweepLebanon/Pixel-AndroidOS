@@ -7,8 +7,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.graphics.Color
-import com.example.pixel.theme.tokens.ColorDarkTokens
-import com.example.pixel.theme.tokens.ColorLightTokens
 
 @Stable
 class ColorScheme(
@@ -199,36 +197,39 @@ class ColorScheme(
     }
 }
 
+/**
+ * Returns a light Pixel color scheme.
+ */
 fun lightColorScheme(
-    blue: Color = ColorLightTokens.Primary,
-    beige: Color = ColorLightTokens.OnPrimary,
-    barleyWhite: Color = ColorLightTokens.PrimaryContainer,
-    cararra: Color = ColorLightTokens.OnPrimaryContainer,
-    cosmos: Color = ColorLightTokens.InversePrimary,
-    cottonCandy: Color = ColorLightTokens.Secondary,
-    maximumBlue: Color = ColorLightTokens.OnSecondary,
-    lightFailure: Color = ColorLightTokens.SecondaryContainer,
-    lightNeutral: Color = ColorLightTokens.OnSecondaryContainer,
-    lightSuccess: Color = ColorLightTokens.Tertiary,
-    darkFailure: Color = ColorLightTokens.OnTertiary,
-    darkNeutral: Color = ColorLightTokens.TertiaryContainer,
-    darkSuccess: Color = ColorLightTokens.OnTertiaryContainer,
-    light1: Color = ColorLightTokens.Background,
-    light2: Color = ColorLightTokens.OnBackground,
-    light3: Color = ColorLightTokens.Surface,
-    light4: Color = ColorLightTokens.OnSurface,
-    light5: Color = ColorLightTokens.SurfaceVariant,
-    light6: Color = ColorLightTokens.OnSurfaceVariant,
-    light7: Color = blue,
-    light8: Color = ColorLightTokens.InverseSurface,
-    dark1: Color = ColorLightTokens.InverseOnSurface,
-    dark2: Color = ColorLightTokens.Error,
-    dark3: Color = ColorLightTokens.OnError,
-    dark4: Color = ColorLightTokens.ErrorContainer,
-    dark5: Color = ColorLightTokens.OnErrorContainer,
-    dark6: Color = ColorLightTokens.Outline,
-    dark7: Color = ColorLightTokens.OutlineVariant,
-    dark8: Color = ColorLightTokens.Scrim,
+    blue: Color = Blue,
+    beige: Color = Beige,
+    barleyWhite: Color = BarleyWhite,
+    cararra: Color = Cararra,
+    cosmos: Color = Cosmos,
+    cottonCandy: Color = CottonCandy,
+    maximumBlue: Color = MaximusBlue,
+    lightFailure: Color = LightFailure,
+    lightNeutral: Color = LightNeutral,
+    lightSuccess: Color = LightSuccess,
+    darkFailure: Color = DarkFailure,
+    darkNeutral: Color = DarkNeutral,
+    darkSuccess: Color = DarkSuccess,
+    light1: Color = Light1,
+    light2: Color = Light2,
+    light3: Color = Light3,
+    light4: Color = Light4,
+    light5: Color = Light5,
+    light6: Color = Light6,
+    light7: Color = Light7,
+    light8: Color = Light8,
+    dark1: Color = Dark1,
+    dark2: Color = Dark2,
+    dark3: Color = Dark3,
+    dark4: Color = Dark4,
+    dark5: Color = Dark5,
+    dark6: Color = Dark6,
+    dark7: Color = Dark7,
+    dark8: Color = Dark8,
 ): ColorScheme =
     ColorScheme(
         blue = blue,
@@ -263,38 +264,38 @@ fun lightColorScheme(
     )
 
 /**
- * Returns a dark Material color scheme.
+ * Returns a dark Pixel color scheme.
  */
 fun darkColorScheme(
-    blue: Color = ColorDarkTokens.Primary,
-    beige: Color = ColorDarkTokens.OnPrimary,
-    barleyWhite: Color = ColorDarkTokens.PrimaryContainer,
-    cararra: Color = ColorDarkTokens.OnPrimaryContainer,
-    cosmos: Color = ColorDarkTokens.InversePrimary,
-    cottonCandy: Color = ColorDarkTokens.Secondary,
-    maximumBlue: Color = ColorDarkTokens.OnSecondary,
-    lightFailure: Color = ColorDarkTokens.SecondaryContainer,
-    lightNeutral: Color = ColorDarkTokens.OnSecondaryContainer,
-    lightSuccess: Color = ColorDarkTokens.Tertiary,
-    darkFailure: Color = ColorDarkTokens.OnTertiary,
-    darkNeutral: Color = ColorDarkTokens.TertiaryContainer,
-    darkSuccess: Color = ColorDarkTokens.OnTertiaryContainer,
-    light1: Color = ColorDarkTokens.Background,
-    light2: Color = ColorDarkTokens.OnBackground,
-    light3: Color = ColorDarkTokens.Surface,
-    light4: Color = ColorDarkTokens.OnSurface,
-    light5: Color = ColorDarkTokens.SurfaceVariant,
-    light6: Color = ColorDarkTokens.OnSurfaceVariant,
-    light7: Color = blue,
-    light8: Color = ColorDarkTokens.InverseSurface,
-    dark1: Color = ColorDarkTokens.InverseOnSurface,
-    dark2: Color = ColorDarkTokens.Error,
-    dark3: Color = ColorDarkTokens.OnError,
-    dark4: Color = ColorDarkTokens.ErrorContainer,
-    dark5: Color = ColorDarkTokens.OnErrorContainer,
-    dark6: Color = ColorDarkTokens.Outline,
-    dark7: Color = ColorDarkTokens.OutlineVariant,
-    dark8: Color = ColorDarkTokens.Scrim,
+    blue: Color = Blue,
+    beige: Color = Beige,
+    barleyWhite: Color = BarleyWhite,
+    cararra: Color = Cararra,
+    cosmos: Color = Cosmos,
+    cottonCandy: Color = CottonCandy,
+    maximumBlue: Color = MaximusBlue,
+    lightFailure: Color = LightFailure,
+    lightNeutral: Color = LightNeutral,
+    lightSuccess: Color = LightSuccess,
+    darkFailure: Color = DarkFailure,
+    darkNeutral: Color = DarkNeutral,
+    darkSuccess: Color = DarkSuccess,
+    light1: Color = Light1,
+    light2: Color = Light2,
+    light3: Color = Light3,
+    light4: Color = Light4,
+    light5: Color = Light5,
+    light6: Color = Light6,
+    light7: Color = Light7,
+    light8: Color = Light8,
+    dark1: Color = Dark1,
+    dark2: Color = Dark2,
+    dark3: Color = Dark3,
+    dark4: Color = Dark4,
+    dark5: Color = Dark5,
+    dark6: Color = Dark6,
+    dark7: Color = Dark7,
+    dark8: Color = Dark8,
 ): ColorScheme =
     ColorScheme(
         blue = blue,

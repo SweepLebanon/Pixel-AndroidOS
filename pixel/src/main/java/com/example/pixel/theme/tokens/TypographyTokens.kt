@@ -1,24 +1,22 @@
 package com.example.pixel.theme.tokens
 
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.pixel.theme.dinoFontFamily
+import com.example.pixel.theme.DefaultTextStyle
+import com.example.pixel.theme.FontFamily.dinoFontFamily
 
 internal object TypographyTokens {
-    val SuperDino1 =
-        DefaultTextStyle.copy(
-            fontFamily = dinoFontFamily,
-            fontWeight = FontWeight.Bold,
-            fontSize = 36.sp,
-        )
-    val SuperDino2 =
-        DefaultTextStyle.copy(
-            fontFamily = dinoFontFamily,
-            fontWeight = FontWeight.Bold,
-            fontSize = 28.sp,
-            letterSpacing = 0.2.sp,
-        )
+    val SuperDino1 = DefaultTextStyle.copy(
+        fontFamily = dinoFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 36.sp,
+    )
+    val SuperDino2 = DefaultTextStyle.copy(
+        fontFamily = dinoFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 28.sp,
+        letterSpacing = 0.2.sp,
+    )
     val Dino1 = DefaultTextStyle.copy(
         fontFamily = dinoFontFamily,
         fontWeight = FontWeight.Bold,
@@ -186,5 +184,3 @@ internal object TypographyTokens {
     )
 
 }
-
-internal val DefaultTextStyle = TextStyle.Default.copy()
