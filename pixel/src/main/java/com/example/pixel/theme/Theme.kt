@@ -11,7 +11,6 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
 
 @Immutable
 data class PrimaryColors(
@@ -48,7 +47,7 @@ data class GrayColors(
 )
 
 @Immutable
-data class CustomColors(
+data class ExtendedColors(
     val primaryColors: PrimaryColors,
     val secondaryColors: SecondaryColors,
     val grayColors: GrayColors
@@ -56,7 +55,7 @@ data class CustomColors(
 
 
 val LocalColors = staticCompositionLocalOf {
-    CustomColors(
+    ExtendedColors(
         primaryColors = PrimaryColors(
             blue = Color.Transparent,
             beige = Color.Unspecified,
@@ -86,39 +85,6 @@ val LocalColors = staticCompositionLocalOf {
             dark7 = Color.Unspecified,
             dark8 = Color.Unspecified,
         )
-    )
-}
-
-val LocalTypography = staticCompositionLocalOf {
-    CustomTypography(
-        superDino1 = TextStyle.Default,
-        superDino2 = TextStyle.Default,
-        dino1 = TextStyle.Default,
-        dino2 = TextStyle.Default,
-        dino3 = TextStyle.Default,
-        dino4 = TextStyle.Default,
-        big1 = TextStyle.Default,
-        big2 = TextStyle.Default,
-        big3 = TextStyle.Default,
-        big4 = TextStyle.Default,
-        medium1 = TextStyle.Default,
-        medium2 = TextStyle.Default,
-        medium3 = TextStyle.Default,
-        mediumSmall1 = TextStyle.Default,
-        mediumSmall2 = TextStyle.Default,
-        mediumSmall3 = TextStyle.Default,
-        small1 = TextStyle.Default,
-        small2 = TextStyle.Default,
-        small3 = TextStyle.Default,
-        small4 = TextStyle.Default,
-        superSmall1 = TextStyle.Default,
-        superSmall2 = TextStyle.Default,
-        superSmall3 = TextStyle.Default,
-        capsBig = TextStyle.Default,
-        capsMedium = TextStyle.Default,
-        capsSmall = TextStyle.Default,
-        capsSuperSmall = TextStyle.Default,
-        capsSuperTiny = TextStyle.Default
     )
 }
 
@@ -207,7 +173,7 @@ fun AppCatalogTheme(
 @Composable
 fun PixelTheme(
     colorScheme: ColorScheme = PixelTheme.colorScheme,
-    typography: CustomTypography = PixelTheme.typography,
+    typography: Typography = PixelTheme.typography,
     padding: Padding = PixelTheme.padding,
     content: @Composable () -> Unit,
 ) {
@@ -232,7 +198,7 @@ fun PixelTheme(
 
 // Use with eg. ExtendedTheme.colors.tertiary
 object PixelTheme {
-    val colors: CustomColors
+    val colors: ExtendedColors
         @ReadOnlyComposable
         @Composable get() = LocalColors.current
 
@@ -240,7 +206,7 @@ object PixelTheme {
         @ReadOnlyComposable
         @Composable get() = LocalColorScheme.current
 
-    val typography: CustomTypography
+    val typography: Typography
         @ReadOnlyComposable
         @Composable get() = LocalTypography.current
 

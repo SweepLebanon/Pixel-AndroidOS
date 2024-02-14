@@ -12,14 +12,16 @@ import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.pixel.theme.AppCatalogTheme
 import com.example.pixel.theme.PixelTheme
+import com.example.pixel.theme.dinoFontFamily
 
 @Composable
-fun MyPixelButton(
+fun PixelButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     content: @Composable RowScope.() -> Unit
 ) {
+
     Button(
         colors = ButtonDefaults.buttonColors(
             containerColor = PixelTheme.colorScheme.blue,
@@ -31,17 +33,13 @@ fun MyPixelButton(
                 .copy(alpha = 0.7f)
         ),
         shape = ButtonShape,
-        elevation = ButtonDefaults.elevatedButtonElevation(
-//            defaultElevation = PixelTheme.elevation.default,
-//            pressedElevation = PixelTheme.elevation.pressed
-            /* disabledElevation = 0.dp */
-        ),
+        elevation = ButtonDefaults.elevatedButtonElevation(),
         enabled = enabled,
         onClick = onClick,
         modifier = modifier,
         content = {
             ProvideTextStyle(
-                value = PixelTheme.typography.big1
+                value = PixelTheme.typography.dino1
             ) {
                 content()
             }
@@ -56,9 +54,10 @@ val ButtonShape = RoundedCornerShape(percent = 50)
 @Composable
 fun MyPixelButtonPreview() {
     AppCatalogTheme {
-        MyPixelButton(onClick = { /*TODO*/ }) {
+        PixelButton(onClick = { /*TODO*/ }) {
             Text(
                 text = "Hello", color = PixelTheme.colorScheme.dark8,
+                style = PixelTheme.typography.big4.copy(fontFamily = dinoFontFamily)
             )
 
         }
