@@ -21,7 +21,7 @@ val dinoFontFamily = FontFamily(
 )
 
 @Immutable
-data class CustomTypography(
+data class PixelTypography(
     val superDino1: TextStyle,
     val superDino2: TextStyle,
     val dino1: TextStyle,
@@ -52,7 +52,7 @@ data class CustomTypography(
     val capsSuperTiny: TextStyle
 ) {
     companion object {
-        val Default = CustomTypography(
+        val Default = PixelTypography(
             superDino1 = TextStyle.Default.copy(
                 fontFamily = dinoFontFamily,
                 fontSize = 36.sp,
