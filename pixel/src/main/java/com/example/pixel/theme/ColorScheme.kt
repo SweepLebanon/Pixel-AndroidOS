@@ -1,5 +1,6 @@
 package com.example.pixel.theme
 
+import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,6 +8,310 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.graphics.Color
+
+@Immutable
+data class PrimaryColors(
+    val blue: Color,
+    val beige: Color
+)
+
+@Immutable
+data class SecondaryColors(
+    val barleyWhite: Color,
+    val cararra: Color,
+    val cosmos: Color,
+    val cottonCandy: Color,
+    val greenBlue: Color
+)
+
+@Immutable
+data class GrayColors(
+    val light1: Color,
+    val light2: Color,
+    val light3: Color,
+    val light4: Color,
+    val light5: Color,
+    val light6: Color,
+    val light7: Color,
+    val light8: Color,
+    val dark1: Color,
+    val dark2: Color,
+    val dark3: Color,
+    val dark4: Color,
+    val dark5: Color,
+    val dark6: Color,
+    val dark7: Color,
+    val dark8: Color,
+)
+
+@Immutable
+data class StatusColors(
+    val lightFailure: Color,
+    val lightNeutral: Color,
+    val lightSuccess: Color,
+    val darkFailure: Color,
+    val darkNeutral: Color,
+    val darkSuccess: Color
+)
+
+@Immutable
+data class Colors(
+    val primaryColors: PrimaryColors,
+    val secondaryColors: SecondaryColors,
+    val statusColors: StatusColors,
+    val grayColors: GrayColors
+) {
+    companion object {
+        val Default = Colors(
+            primaryColors = PrimaryColors(
+                blue = Blue,
+                beige = Beige,
+            ),
+            secondaryColors = SecondaryColors(
+                barleyWhite = BarleyWhite,
+                cararra = Cararra,
+                cosmos = Cosmos,
+                cottonCandy = CottonCandy,
+                greenBlue = GreenBlue
+            ),
+            statusColors = StatusColors(
+                lightFailure = LightFailure,
+                lightNeutral = LightNeutral,
+                lightSuccess = LightSuccess,
+                darkFailure = DarkFailure,
+                darkNeutral = DarkNeutral,
+                darkSuccess = DarkSuccess
+            ),
+            grayColors = GrayColors(
+                light1 = Light1,
+                light2 = Light2,
+                light3 = Light3,
+                light4 = Light4,
+                light5 = Light5,
+                light6 = Light6,
+                light7 = Light7,
+                light8 = Light8,
+                dark1 = Dark1,
+                dark2 = Dark2,
+                dark3 = Dark3,
+                dark4 = Dark4,
+                dark5 = Dark5,
+                dark6 = Dark6,
+                dark7 = Dark7,
+                dark8 = Dark8,
+            )
+        )
+    }
+}
+
+
+class ColorSchemeA(
+    colors: Colors
+) {
+    var blue by mutableStateOf(colors.primaryColors.blue, structuralEqualityPolicy())
+        internal set
+
+    var beige by mutableStateOf(colors.primaryColors.beige, structuralEqualityPolicy())
+        internal set
+    var barleyWhite by mutableStateOf(colors.secondaryColors.barleyWhite, structuralEqualityPolicy())
+        internal set
+    var cararra by mutableStateOf(colors.secondaryColors.cararra, structuralEqualityPolicy())
+        internal set
+    var cosmos by mutableStateOf(colors.secondaryColors.cosmos, structuralEqualityPolicy())
+        internal set
+    var cottonCandy by mutableStateOf(colors.secondaryColors.cottonCandy, structuralEqualityPolicy())
+        internal set
+    var greenBlue by mutableStateOf(colors.secondaryColors.greenBlue, structuralEqualityPolicy())
+        internal set
+    var lightFailure by mutableStateOf(colors.statusColors.lightFailure, structuralEqualityPolicy())
+        internal set
+    var lightNeutral by mutableStateOf(colors.statusColors.lightNeutral, structuralEqualityPolicy())
+        internal set
+    var lightSuccess by mutableStateOf(colors.statusColors.lightSuccess, structuralEqualityPolicy())
+        internal set
+    var darkFailure by mutableStateOf(colors.statusColors.darkFailure, structuralEqualityPolicy())
+        internal set
+    var darkNeutral by mutableStateOf(colors.statusColors.darkNeutral, structuralEqualityPolicy())
+        internal set
+    var darkSuccess by mutableStateOf(colors.statusColors.darkSuccess, structuralEqualityPolicy())
+        internal set
+    var light1 by mutableStateOf(colors.grayColors.light1, structuralEqualityPolicy())
+        internal set
+    var light2 by mutableStateOf(colors.grayColors.light2, structuralEqualityPolicy())
+        internal set
+    var light3 by mutableStateOf(colors.grayColors.light3, structuralEqualityPolicy())
+        internal set
+    var light4 by mutableStateOf(colors.grayColors.light4, structuralEqualityPolicy())
+        internal set
+    var light5 by mutableStateOf(colors.grayColors.light5, structuralEqualityPolicy())
+        internal set
+    var light6 by mutableStateOf(colors.grayColors.light6, structuralEqualityPolicy())
+        internal set
+    var light7 by mutableStateOf(colors.grayColors.light7, structuralEqualityPolicy())
+        internal set
+    var light8 by mutableStateOf(colors.grayColors.light8, structuralEqualityPolicy())
+        internal set
+    var dark1 by mutableStateOf(colors.grayColors.dark1, structuralEqualityPolicy())
+        internal set
+    var dark2 by mutableStateOf(colors.grayColors.dark2, structuralEqualityPolicy())
+        internal set
+    var dark3 by mutableStateOf(colors.grayColors.dark3, structuralEqualityPolicy())
+        internal set
+    var dark4 by mutableStateOf(colors.grayColors.dark4, structuralEqualityPolicy())
+        internal set
+    var dark5 by mutableStateOf(colors.grayColors.dark5, structuralEqualityPolicy())
+        internal set
+    var dark6 by mutableStateOf(colors.grayColors.dark6, structuralEqualityPolicy())
+        internal set
+    var dark7 by mutableStateOf(colors.grayColors.dark7, structuralEqualityPolicy())
+        internal set
+    var dark8 by mutableStateOf(colors.grayColors.dark8, structuralEqualityPolicy())
+        internal set
+
+    fun copy(
+        blue: Color = this.blue,
+        beige: Color = this.beige,
+        barleyWhite: Color = this.barleyWhite,
+        cararra: Color = this.cararra,
+        cosmos: Color = this.cosmos,
+        cottonCandy: Color = this.cottonCandy,
+        greenBlue: Color = this.greenBlue,
+        lightFailure: Color = this.lightFailure,
+        lightNeutral: Color = this.lightNeutral,
+        lightSuccess: Color = this.lightSuccess,
+        darkFailure: Color = this.darkFailure,
+        darkNeutral: Color = this.darkNeutral,
+        darkSuccess: Color = this.darkSuccess,
+        light1: Color = this.light1,
+        light2: Color = this.light2,
+        light3: Color = this.light3,
+        light4: Color = this.light4,
+        light5: Color = this.light5,
+        light6: Color = this.light6,
+        light7: Color = this.light7,
+        light8: Color = this.light8,
+        dark1: Color = this.dark1,
+        dark2: Color = this.dark2,
+        dark3: Color = this.dark3,
+        dark4: Color = this.dark4,
+        dark5: Color = this.dark5,
+        dark6: Color = this.dark6,
+        dark7: Color = this.dark7,
+        dark8: Color = this.dark8,
+    ): ColorSchemeA =
+        ColorSchemeA(
+            colors = Colors(
+                primaryColors = PrimaryColors(
+                    blue = blue,
+                    beige = beige,
+                ),
+                secondaryColors = SecondaryColors(
+                    barleyWhite = barleyWhite,
+                    cararra = cararra,
+                    cosmos = cosmos,
+                    cottonCandy = cottonCandy,
+                    greenBlue = greenBlue
+                ), statusColors = StatusColors(
+                    lightFailure = lightFailure,
+                    lightNeutral = lightNeutral,
+                    lightSuccess = lightSuccess,
+                    darkFailure = darkFailure,
+                    darkNeutral = darkNeutral,
+                    darkSuccess = darkSuccess
+                ),
+                grayColors = GrayColors(
+                    light1 = light1,
+                    light2 = light2,
+                    light3 = light3,
+                    light4 = light4,
+                    light5 = light5,
+                    light6 = light6,
+                    light7 = light7,
+                    light8 = light8,
+                    dark1 = dark1,
+                    dark2 = dark2,
+                    dark3 = dark3,
+                    dark4 = dark4,
+                    dark5 = dark5,
+                    dark6 = dark6,
+                    dark7 = dark7,
+                    dark8 = dark8,
+                )
+            )
+        )
+}
+
+fun lightColorSchemeA(
+    blue: Color = Blue,
+    beige: Color = Beige,
+    barleyWhite: Color = BarleyWhite,
+    cararra: Color = Cararra,
+    cosmos: Color = Cosmos,
+    cottonCandy: Color = CottonCandy,
+    greenBlue: Color = GreenBlue,
+    lightFailure: Color = LightFailure,
+    lightNeutral: Color = LightNeutral,
+    lightSuccess: Color = LightSuccess,
+    darkFailure: Color = DarkFailure,
+    darkNeutral: Color = DarkNeutral,
+    darkSuccess: Color = DarkSuccess,
+    light1: Color = Light1,
+    light2: Color = Light2,
+    light3: Color = Light3,
+    light4: Color = Light4,
+    light5: Color = Light5,
+    light6: Color = Light6,
+    light7: Color = Light7,
+    light8: Color = Light8,
+    dark1: Color = Dark1,
+    dark2: Color = Dark2,
+    dark3: Color = Dark3,
+    dark4: Color = Dark4,
+    dark5: Color = Dark5,
+    dark6: Color = Dark6,
+    dark7: Color = Dark7,
+    dark8: Color = Dark8,
+): ColorSchemeA = ColorSchemeA(
+    colors = Colors(
+        primaryColors = PrimaryColors(
+            blue = blue,
+            beige = beige,
+        ),
+        secondaryColors = SecondaryColors(
+            barleyWhite = barleyWhite,
+            cararra = cararra,
+            cosmos = cosmos,
+            cottonCandy = cottonCandy,
+            greenBlue = greenBlue
+        ), statusColors = StatusColors(
+            lightFailure = lightFailure,
+            lightNeutral = lightNeutral,
+            lightSuccess = lightSuccess,
+            darkFailure = darkFailure,
+            darkNeutral = darkNeutral,
+            darkSuccess = darkSuccess
+        ),
+        grayColors = GrayColors(
+            light1 = light1,
+            light2 = light2,
+            light3 = light3,
+            light4 = light4,
+            light5 = light5,
+            light6 = light6,
+            light7 = light7,
+            light8 = light8,
+            dark1 = dark1,
+            dark2 = dark2,
+            dark3 = dark3,
+            dark4 = dark4,
+            dark5 = dark5,
+            dark6 = dark6,
+            dark7 = dark7,
+            dark8 = dark8,
+        )
+    )
+)
+
 
 @Stable
 class ColorScheme(
@@ -16,7 +321,7 @@ class ColorScheme(
     cararra: Color,
     cosmos: Color,
     cottonCandy: Color,
-    maximumBlue: Color,
+    greenBlue: Color,
     lightFailure: Color,
     lightNeutral: Color,
     lightSuccess: Color,
@@ -52,7 +357,7 @@ class ColorScheme(
         internal set
     var cottonCandy by mutableStateOf(cottonCandy, structuralEqualityPolicy())
         internal set
-    var maximumBlue by mutableStateOf(maximumBlue, structuralEqualityPolicy())
+    var greenBlue by mutableStateOf(greenBlue, structuralEqualityPolicy())
         internal set
     var lightFailure by mutableStateOf(lightFailure, structuralEqualityPolicy())
         internal set
@@ -106,7 +411,7 @@ class ColorScheme(
         cararra: Color = this.cararra,
         cosmos: Color = this.cosmos,
         cottonCandy: Color = this.cottonCandy,
-        maximumBlue: Color = this.maximumBlue,
+        greenBlue: Color = this.greenBlue,
         lightFailure: Color = this.lightFailure,
         lightNeutral: Color = this.lightNeutral,
         lightSuccess: Color = this.lightSuccess,
@@ -137,7 +442,7 @@ class ColorScheme(
             cararra = cararra,
             cosmos = cosmos,
             cottonCandy = cottonCandy,
-            maximumBlue = maximumBlue,
+            greenBlue = greenBlue,
             lightFailure = lightFailure,
             lightNeutral = lightNeutral,
             lightSuccess = lightSuccess,
@@ -170,7 +475,7 @@ class ColorScheme(
                 "cararra=$cararra" +
                 "cosmos=$cosmos" +
                 "cottonCandy=$cottonCandy" +
-                "maximumBlue=$maximumBlue" +
+                "greenBlue=$greenBlue" +
                 "lightFailure=$lightFailure" +
                 "lightNeutral=$lightNeutral" +
                 "lightSuccess=$lightSuccess" +
@@ -207,7 +512,7 @@ fun lightColorScheme(
     cararra: Color = Cararra,
     cosmos: Color = Cosmos,
     cottonCandy: Color = CottonCandy,
-    maximumBlue: Color = MaximusBlue,
+    greenBlue: Color = GreenBlue,
     lightFailure: Color = LightFailure,
     lightNeutral: Color = LightNeutral,
     lightSuccess: Color = LightSuccess,
@@ -238,7 +543,7 @@ fun lightColorScheme(
         cararra = cararra,
         cosmos = cosmos,
         cottonCandy = cottonCandy,
-        maximumBlue = maximumBlue,
+        greenBlue = greenBlue,
         lightFailure = lightFailure,
         lightNeutral = lightNeutral,
         lightSuccess = lightSuccess,
@@ -273,7 +578,7 @@ fun darkColorScheme(
     cararra: Color = Cararra,
     cosmos: Color = Cosmos,
     cottonCandy: Color = CottonCandy,
-    maximumBlue: Color = MaximusBlue,
+    greenBlue: Color = GreenBlue,
     lightFailure: Color = LightFailure,
     lightNeutral: Color = LightNeutral,
     lightSuccess: Color = LightSuccess,
@@ -304,7 +609,7 @@ fun darkColorScheme(
         cararra = cararra,
         cosmos = cosmos,
         cottonCandy = cottonCandy,
-        maximumBlue = maximumBlue,
+        greenBlue = greenBlue,
         lightFailure = lightFailure,
         lightNeutral = lightNeutral,
         lightSuccess = lightSuccess,
@@ -350,7 +655,7 @@ internal fun ColorScheme.updateColorSchemeFrom(other: ColorScheme) {
     cararra = other.cararra
     cosmos = other.cosmos
     cottonCandy = other.cottonCandy
-    maximumBlue = other.maximumBlue
+    greenBlue = other.greenBlue
     lightFailure = other.lightFailure
     lightNeutral = other.lightNeutral
     lightSuccess = other.lightSuccess

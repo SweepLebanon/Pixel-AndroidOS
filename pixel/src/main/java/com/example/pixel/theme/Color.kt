@@ -15,7 +15,7 @@ internal val BarleyWhite = Color(0xFFFFF4D1)
 internal val Cararra = Color(0xFFEBECE6)
 internal val Cosmos = Color(0xFFFFDBDB)
 internal val CottonCandy = Color(0xFFFFBBDA)
-internal val MaximusBlue = Color(0xFF42ABC5)
+internal val GreenBlue = Color(0xFF42ABC5)
 
 //Status Colors
 internal val LightFailure = Color(0xFFFF3B30)

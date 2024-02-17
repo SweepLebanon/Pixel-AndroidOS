@@ -23,6 +23,15 @@ fun PixelTheme(
         updateColorSchemeFrom(colorScheme)
     }
 
+//    val light = lightColorSchemeA(
+//        colors = Colors(
+//            primaryColors = PrimaryColors(),
+//            secondaryColors =  SecondaryColors(),
+//            statusColors = StatusColors(),
+//            grayColors =  GrayColors()
+//        )
+//    )
+
     CompositionLocalProvider(
         LocalColorScheme providesDefault rememberedColorScheme,
         LocalTypography provides typography,
