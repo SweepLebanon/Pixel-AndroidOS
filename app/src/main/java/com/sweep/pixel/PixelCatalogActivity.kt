@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:04 AM.
+ * Last modified 2/17/24, 8:01 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.sweep.pixel
 
 import android.os.Bundle
@@ -15,46 +22,3 @@ class PixelCatalogActivity : ComponentActivity() {
         setContent { PixelCatalog() }
     }
 }
-//
-// @Composable
-// fun PixelButton() {
-//    FilledTonalButton(onClick = { /*TODO*/ }) {
-//        Text(
-//            modifier =
-//                Modifier.padding(
-//                    end = 10.dp,
-//                ),
-//            text = "Home",
-//        )
-//        Icon(
-//            modifier = Modifier.align(Alignment.CenterVertically),
-//            painter = painterResource(R.drawable.ic_chevron_down),
-//            contentDescription = null,
-//        )
-//    }
-// }
-//
-// @Preview(showBackground = true)
-// @Composable
-// fun PixelButtonPreview() {
-//    PixelButton()
-// }
-//
-// @Composable
-// fun Greeting(
-//    name: String,
-//    modifier: Modifier = Modifier,
-// ) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier,
-//    )
-// }
-//
-// @Preview(showBackground = true)
-// @Composable
-// fun GreetingPreview() {
-//    PixelTheme {
-//        Greeting("Android")
-//    }
-// }

@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:03 AM.
+ * Last modified 2/18/24, 5:06 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.example.pixel.theme
 
 import androidx.compose.material3.ProvideTextStyle
@@ -22,15 +29,6 @@ fun PixelTheme(
     }.apply {
         updateColorSchemeFrom(colorScheme)
     }
-
-//    val light = lightColorSchemeA(
-//        colors = Colors(
-//            primaryColors = PrimaryColors(),
-//            secondaryColors =  SecondaryColors(),
-//            statusColors = StatusColors(),
-//            grayColors =  GrayColors()
-//        )
-//    )
 
     CompositionLocalProvider(
         LocalColorScheme providesDefault rememberedColorScheme,

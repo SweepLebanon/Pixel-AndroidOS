@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:03 AM.
+ * Last modified 2/14/24, 7:45 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.example.pixel.theme
 
 import androidx.compose.runtime.Immutable

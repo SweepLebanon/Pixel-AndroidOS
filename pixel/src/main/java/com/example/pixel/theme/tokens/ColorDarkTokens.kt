@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:02 AM.
+ * Last modified 2/3/24, 11:10 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.example.pixel.theme.tokens
 
 internal object ColorDarkTokens {

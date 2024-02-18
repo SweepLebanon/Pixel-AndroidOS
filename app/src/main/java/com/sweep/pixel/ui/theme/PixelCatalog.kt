@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:03 AM.
+ * Last modified 2/19/24, 12:45 AM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.sweep.pixel.ui.theme
 
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +21,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.pixel.component.PixelButton
+import com.example.pixel.component.button.ButtonType
+import com.example.pixel.component.button.PixelButton
+import com.example.pixel.component.button.PixelButtonSpecs
 import com.example.pixel.theme.PixelTheme
 
 /**
@@ -47,8 +56,7 @@ fun PixelCatalog() {
             item { Text("Buttons", Modifier.padding(top = 16.dp)) }
             item {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                    PixelButton(onClick = { /*TODO*/ }) {
-                        Text(text = "Hello World")
+                    PixelButton(text = "Hello", pixelButtonSpecs = PixelButtonSpecs.Big(buttonType = ButtonType.Fill)) {
                     }
                 }
             }

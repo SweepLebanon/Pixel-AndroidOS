@@ -1,7 +1,15 @@
-package com.example.pixel.component
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:02 AM.
+ * Last modified 2/19/24, 12:28 AM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
+package com.example.pixel.component.text
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.text.InlineTextContent
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -60,7 +68,7 @@ fun PixelText(
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
     onTextLayout: ((TextLayoutResult) -> Unit)? = null,
-    style: TextStyle = PixelTheme.typography.medium1
+    style: TextStyle = LocalTextStyle.current
 ) {
     Text(
         text = text,
@@ -162,5 +170,6 @@ private fun PixelTextPreview() {
         })
     }
 }
+
 
 

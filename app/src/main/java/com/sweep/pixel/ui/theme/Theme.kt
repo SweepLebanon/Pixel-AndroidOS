@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:04 AM.
+ * Last modified 2/17/24, 8:03 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.sweep.pixel.ui.theme
 
 import androidx.compose.runtime.Composable

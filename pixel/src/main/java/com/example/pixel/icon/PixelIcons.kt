@@ -1,3 +1,10 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:02 AM.
+ * Last modified 2/14/24, 11:34 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.example.pixel.icon
 
 import androidx.compose.material.icons.Icons
