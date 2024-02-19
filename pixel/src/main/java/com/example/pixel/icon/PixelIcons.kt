@@ -1,11 +1,18 @@
+/*
+ * Created by Mohamad Hamade (Vordead) on 2/19/24, 1:02 AM.
+ * Last modified 2/14/24, 11:34 PM
+ * Copyright (c) 2024.
+ * Pixel. All rights reserved.
+ */
+
 package com.example.pixel.icon
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Bookmarks
 import androidx.compose.material.icons.outlined.Upcoming
 import androidx.compose.material.icons.rounded.Add
-import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Bookmark
 import androidx.compose.material.icons.rounded.BookmarkBorder
 import androidx.compose.material.icons.rounded.Bookmarks
@@ -25,7 +32,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
  */
 object PixelIcons {
     val Add = Icons.Rounded.Add
-    val ArrowBack = Icons.Rounded.ArrowBack
+    val ArrowBack = Icons.AutoMirrored.Rounded.ArrowBack
     val Bookmark = Icons.Rounded.Bookmark
     val BookmarkBorder = Icons.Rounded.BookmarkBorder
     val Bookmarks = Icons.Rounded.Bookmarks
