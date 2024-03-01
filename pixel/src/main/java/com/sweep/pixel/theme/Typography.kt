@@ -5,12 +5,12 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme
+package com.sweep.pixel.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
-import com.example.pixel.theme.tokens.TypographyTokens
+import com.sweep.pixel.theme.tokens.TypographyTokens
 
 @Immutable
 class Typography(

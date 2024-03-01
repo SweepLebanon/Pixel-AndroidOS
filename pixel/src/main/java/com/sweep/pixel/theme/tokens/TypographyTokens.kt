@@ -5,12 +5,12 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme.tokens
+package com.sweep.pixel.theme.tokens
 
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.pixel.theme.DefaultTextStyle
-import com.example.pixel.theme.FontFamily.dinProFontFamily
+import com.sweep.pixel.theme.DefaultTextStyle
+import com.sweep.pixel.theme.FontFamily.dinProFontFamily
 
 internal object TypographyTokens {
     val SuperDino1 = DefaultTextStyle.copy(

@@ -5,13 +5,13 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.component.button
+package com.sweep.pixel.component.button
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.pixel.theme.Padding
-import com.example.pixel.theme.tokens.TypographyTokens
+import com.sweep.pixel.theme.Padding
+import com.sweep.pixel.theme.tokens.TypographyTokens
 
 /**
  * Sealed class representing the type of button.

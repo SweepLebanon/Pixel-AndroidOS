@@ -5,7 +5,7 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme.tokens
+package com.sweep.pixel.theme.tokens
 
 internal object ColorDarkTokens {
     val Background = PaletteTokens.Neutral10

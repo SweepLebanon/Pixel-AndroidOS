@@ -6,7 +6,7 @@ plugins {
 
 android {
     compileSdk = 34
-    namespace = "com.example.pixel"
+    namespace = "com.sweep.pixel"
 
     buildFeatures {
         compose = true
@@ -65,7 +65,7 @@ publishing {
         register<MavenPublication>("release") {
             artifactId = "Pixel"
             groupId = "com.sweep"
-            version = "1.0.0"
+            version = "1.0.1"
 
             afterEvaluate {
                 from(components["release"])
@@ -74,10 +74,25 @@ publishing {
 
         repositories {
             maven {
+                credentials {
+                    username = ""
+                    password = ""
+                }
+
                 name = "Pixel"
                 url = uri("${project.buildDir}/"
                         + "https://github.com/SweepLebanon/Pixel-AndroidOS.git")
             }
         }
+
+        tasks.register<Zip>("generateRepo") {
+            val publishTask = tasks.named(
+                "publishReleasePublicationToMyrepoRepository",
+                PublishToMavenRepository::class.java)
+            from(publishTask.map { it.repository.url })
+            into("mylibrary")
+            archiveFileName.set("mylibrary.zip")
+        }
+
     }
 }

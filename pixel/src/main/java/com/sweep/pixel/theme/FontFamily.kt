@@ -5,12 +5,12 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme
+package com.sweep.pixel.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.example.pixel.R
+import com.sweep.pixel.R
 
 object FontFamily {
     val dinProFontFamily = FontFamily(

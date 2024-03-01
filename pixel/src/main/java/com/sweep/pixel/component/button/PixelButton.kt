@@ -5,7 +5,7 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.component.button
+package com.sweep.pixel.component.button
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -28,8 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.pixel.component.text.PixelText
-import com.example.pixel.theme.PixelTheme
+import com.sweep.pixel.component.text.PixelText
+import com.sweep.pixel.theme.PixelTheme
 
 /**
  * Composable function for rendering a customizable PixelButton.
@@ -141,7 +141,7 @@ fun PixelButton(
 private fun PixelButtonSkinny() {
     PixelButton(
         pixelButtonSpecs = PixelButtonSpecs.Skinny(buttonType = ButtonType.Default),
-        onClick = { /*TODO*/ }) {
+        onClick = {}) {
         Text(
             text = "Hello", color = PixelTheme.colorScheme.dark8,
         )

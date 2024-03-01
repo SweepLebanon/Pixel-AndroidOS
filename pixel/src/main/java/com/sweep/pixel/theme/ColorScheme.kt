@@ -5,7 +5,7 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme
+package com.sweep.pixel.theme
 
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue

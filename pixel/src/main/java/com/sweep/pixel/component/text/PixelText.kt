@@ -5,7 +5,7 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.component.text
+package com.sweep.pixel.component.text
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.text.InlineTextContent
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
-import com.example.pixel.theme.PixelTheme
+import com.sweep.pixel.theme.PixelTheme
 
 
 /**

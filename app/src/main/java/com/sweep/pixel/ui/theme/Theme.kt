@@ -8,9 +8,9 @@
 package com.sweep.pixel.ui.theme
 
 import androidx.compose.runtime.Composable
-import com.example.pixel.theme.PixelTheme
-import com.example.pixel.theme.darkColorScheme
-import com.example.pixel.theme.lightColorScheme
+import com.sweep.pixel.theme.PixelTheme
+import com.sweep.pixel.theme.darkColorScheme
+import com.sweep.pixel.theme.lightColorScheme
 
 val lightColorScheme =
     lightColorScheme(

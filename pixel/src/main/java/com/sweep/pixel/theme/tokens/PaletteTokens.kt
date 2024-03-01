@@ -5,7 +5,7 @@
  * Pixel. All rights reserved.
  */
 
-package com.example.pixel.theme.tokens
+package com.sweep.pixel.theme.tokens
 
 import androidx.compose.ui.graphics.Color
 

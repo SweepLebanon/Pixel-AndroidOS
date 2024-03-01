@@ -21,10 +21,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.pixel.component.button.ButtonType
-import com.example.pixel.component.button.PixelButton
-import com.example.pixel.component.button.PixelButtonSpecs
-import com.example.pixel.theme.PixelTheme
+import com.sweep.pixel.component.button.ButtonType
+import com.sweep.pixel.component.button.PixelButton
+import com.sweep.pixel.component.button.PixelButtonSpecs
+import com.sweep.pixel.theme.PixelTheme
 
 /**
  * Pixel component catalog.
