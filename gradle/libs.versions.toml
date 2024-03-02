@@ -14,6 +14,9 @@ material-icons-extended = "1.6.2"
 material3 = "1.2.0"
 ui-tooling = "1.7.0-alpha03"
 androidGradlePlugin = "8.2.2"
+androidLibrary = "8.2.2"
+kotlin = "1.9.0"
+klint = "11.6.1"
 
 
 [libraries]
@@ -41,3 +44,6 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+jetbrains-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
