@@ -20,4 +20,3 @@ dependencyResolutionManagement {
 rootProject.name = "pixel"
 include(":app")
 include(":pixel")
-//include(":build-logic")
