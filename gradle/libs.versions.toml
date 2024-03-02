@@ -15,8 +15,14 @@ material3 = "1.2.0"
 ui-tooling = "1.7.0-alpha03"
 androidGradlePlugin = "8.2.2"
 androidLibrary = "8.2.2"
-kotlin = "1.9.0"
+kotlin = "1.9.21"
 klint = "11.6.1"
+ksp = "1.9.21-1.0.16"
+androidTools = "31.3.0"
+spotless = "6.23.3"
+
+
+
 
 
 [libraries]
@@ -42,8 +48,22 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose
 junit = { module = "junit:junit", version.ref = "junit-junit" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+work-testing = { group = "androidx.work", name = "work-testing", version = "2.9.0" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 jetbrains-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
+
+# Plugins defined by this project
+pixel-library = { id = "pixel.library.compose", version = "unspecified"}
+pixel-application = { id = "pixel.application.compose", version = "unspecified"}
+pixel-spotless = { id = "madifiers.spotless", version = "unspecified"}
