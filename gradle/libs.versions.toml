@@ -14,8 +14,7 @@ material-icons-extended = "1.6.2"
 material3 = "1.2.0"
 ui-tooling = "1.7.0-alpha03"
 androidGradlePlugin = "8.2.2"
-androidLibrary = "8.2.2"
-kotlin = "1.9.21"
+kotlin = "1.9.22"
 klint = "11.6.1"
 ksp = "1.9.21-1.0.16"
 androidTools = "31.3.0"
@@ -62,6 +61,8 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 jetbrains-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+
 
 # Plugins defined by this project
 pixel-library = { id = "pixel.library.compose", version = "unspecified"}

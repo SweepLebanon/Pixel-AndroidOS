@@ -7,17 +7,18 @@ plugins {
 group = "com.sweep.buildlogic"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_19
-    targetCompatibility = JavaVersion.VERSION_19
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_19.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
 tasks {
+    @Suppress("UnstableApiUsage")
     validatePlugins {
         enableStricterValidation = true
         failOnWarning = true
