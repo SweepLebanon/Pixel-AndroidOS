@@ -19,6 +19,8 @@ klint = "11.6.1"
 ksp = "1.9.21-1.0.16"
 androidTools = "31.3.0"
 spotless = "6.23.3"
+nexusPlugin = "1.3.0"
+
 
 
 
@@ -62,6 +64,8 @@ android-library = { id = "com.android.library", version.ref = "androidGradlePlug
 jetbrains-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+nexus-plugin = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "nexusPlugin" }
+
 
 
 # Plugins defined by this project

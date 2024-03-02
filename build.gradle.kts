@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.jetbrains.kotlin) apply false
     alias(libs.plugins.spotless)
+    alias(libs.plugins.nexus.plugin)
     id("pixel.library.compose") apply false
     id("pixel.application.compose") apply false
 }
