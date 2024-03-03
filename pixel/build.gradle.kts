@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin)
     id("maven-publish")
+    id("signing")
 }
 
 android {
@@ -28,8 +29,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -40,7 +41,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "19"
+        jvmTarget = "17"
     }
 }
 
@@ -63,9 +64,9 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            artifactId = "Pixel"
+            artifactId = "pixel"
             groupId = "com.sweep"
-            version = "1.0.1"
+            version = "1.0.0"
 
             afterEvaluate {
                 from(components["release"])
@@ -74,16 +75,14 @@ publishing {
 
         repositories {
             maven {
-                credentials {
-                    username = ""
-                    password = ""
-                }
-
-                name = "Pixel"
-                url = uri("${project.buildDir}/"
-                        + "https://github.com/SweepLebanon/Pixel-AndroidOS.git")
+                name = "pixel"
+                url = uri(
+                    "${project.buildDir}/"
+                            + "https://github.com/SweepLebanon/Pixel-AndroidOS.git"
+                )
             }
         }
+
 
         tasks.register<Zip>("generateRepo") {
             val publishTask = tasks.named(
