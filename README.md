@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Pixel Logo" src="">
+    <img alt="Pixel Logo" src="https://github.com/SweepLebanon/Pixel-AppleOS/assets/73232013/64450a15-677d-44bd-b73e-3cfb1c3b3238">
 </p>
 
 <h3 align='center'>Pixel</h3>
