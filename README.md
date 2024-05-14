@@ -1,3 +1,6 @@
+<h1>This Repo is no longer maintained as Pixel was moved to a separate private repo until further notice.
+Pixel is still under development</h1>
+
 <p align="center">
     <img alt="Pixel Logo" src="https://github.com/SweepLebanon/Pixel-AppleOS/assets/73232013/64450a15-677d-44bd-b73e-3cfb1c3b3238">
 </p>
